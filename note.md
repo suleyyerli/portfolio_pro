@@ -4,9 +4,9 @@
 
 ## Couleur
 
-- Background: #111118
-- Card: #181818
-- Badge: #262626
+- background: #111118
+- card: #181818
+- badge: #262626
 
 ## Bouton et badge
 
@@ -20,8 +20,8 @@
 
 ## couleur texte
 
-- text: #B3B3B3
-- title: #FFFFFF
+- text-text: #B3B3B3
+- text-title: #FFFFFF
 
 ## style des card
 

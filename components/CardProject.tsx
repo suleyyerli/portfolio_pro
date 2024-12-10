@@ -8,11 +8,10 @@ interface CardProjectProps {
   description: string;
   tags: string[];
   image: string;
-  onClick: (id: number) => void;
+  onClick: () => void;
 }
 
 const CardProject: React.FC<CardProjectProps> = ({
-  id,
   title,
   description,
   tags,
@@ -20,7 +19,7 @@ const CardProject: React.FC<CardProjectProps> = ({
   onClick,
 }) => {
   return (
-    <Card className="cursor-pointer style-card" onClick={() => onClick(id)}>
+    <Card className="cursor-pointer style-card" onClick={onClick}>
       <div>
         <img
           src={image}

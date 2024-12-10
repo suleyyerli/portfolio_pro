@@ -14,26 +14,28 @@ const projects = [
   },
   {
     id: 2,
+    title: "Projet : Mobile",
+    description:
+      "Application full-stack, utilisant javascript, NextJS, React, SQLite, Prisma, TailwindCSS, ShadcnUI, Authjs",
+    tags: ["FRONTEND", "BACKEND"],
+    image: "/projetphoto/ProjetMobile.png",
+  },
+
+  {
+    id: 3,
+    title: "Projet : Entreprise",
+    description:
+      "Développement d'un formulaire (PSD) et d'un tableur dynamique(TDY)",
+    tags: ["ERP", "DIAPASON"],
+    image: "/projetphoto/ProjetDevise.png",
+  },
+  {
+    id: 4,
     title: "Portfolio version 1",
     description:
       "Développement de mon premier portfolio, utilisant React, NextJS, TailwindCSS, ShadcnUI",
     tags: ["FRONTEND", "REACT/NEXTJS"],
     image: "/projetphoto/projet1.png",
-  },
-  {
-    id: 3,
-    title: "Projet : ERP Diapason",
-    description:
-      "Développement d'un formulaire (PSD) et d'un tableur dynamique(TDY)",
-    tags: ["ERP", "DIAPASON"],
-    image: "/wp2100819.jpg",
-  },
-  {
-    id: 4,
-    title: "Genie",
-    description: "Evolving the Genie app design language",
-    tags: ["UX DESIGN", "BRANDING"],
-    image: "/wp2100819.jpg",
   },
 ];
 
@@ -41,7 +43,7 @@ export default function Projets() {
   const router = useRouter();
 
   const handleCardClick = (id: number) => {
-    router.push(`/projets/${id}`);
+    router.push(`/markdown/projet${id}`);
   };
 
   return (
@@ -61,7 +63,7 @@ export default function Projets() {
               description={project.description}
               tags={project.tags}
               image={project.image}
-              onClick={handleCardClick}
+              onClick={() => handleCardClick(project.id)}
             />
           ))}
         </div>

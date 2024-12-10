@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+
 const VictorMono = localFont({
   src: "./fonts/VictorMono-Regular.ttf",
   variable: "--font-victor-mono",
@@ -22,7 +23,7 @@ export default function RootLayout({
   return (
     <html lang="fr">
       <body
-        className={`${VictorMono.variable} antialiased flex flex-col min-h-screen bg-[#141414]`}
+        className={`${VictorMono.variable} max-w-6xl antialiased flex flex-col bg-[#141414] text-text  mx-auto`}
       >
         <Header />
         <div className="max-w-6xl mx-auto">{children}</div>
